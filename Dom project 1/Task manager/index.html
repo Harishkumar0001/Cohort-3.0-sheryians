@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+   <main>
+
+  <!-- BOX 1: SIDEBAR -->
+  <div class="box1">
+    <div class="task_manager">
+      <i class="ri-checkbox-circle-line"></i>
+      <a href="">Task Manager</a>
+    </div>
+
+    <div class="sidebar_text">
+      <a class="nav-item active" href="#">
+        <i class="ri-home-4-line"></i> Dashboard
+      </a>
+      <a class="nav-item" href="#">
+        <i class="ri-menu-search-line"></i> All Tasks
+      </a>
+      <a class="nav-item" href="#">
+        <i class="ri-calendar-2-line"></i> Today
+      </a>
+      <a class="nav-item" href="#">
+        <i class="ri-time-line"></i> Upcoming
+      </a>
+      <a class="nav-item" href="#">
+        <i class="ri-checkbox-circle-line"></i> Completed
+      </a>
+      <a class="nav-item" href="#">
+        <i class="ri-folder-open-line"></i> Categories
+      </a>
+    </div>
+
+    <div class="nav-section-label">Categories</div>
+    <div class="cat-item"><span class="cat-dot" style="background:#3b82f6"></span>Work<span class="cat-count">0</span></div>
+    <div class="cat-item"><span class="cat-dot" style="background:#a78bfa"></span>Personal<span class="cat-count">0</span></div>
+    <div class="cat-item"><span class="cat-dot" style="background:#eeae40"></span>Shopping<span class="cat-count">0</span></div>
+    <div class="cat-item"><span class="cat-dot" style="background:#ef4444"></span>Urgent<span class="cat-count">0</span></div>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-icon">🚀</div>
+      <div>
+        <p>Stay Productive 🚀</p>
+        <p>You're doing great! Keep completing your tasks.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOX 2: TOPBAR -->
+  <div class="box2">
+    <div class="topbar_greeting">
+      <h6>Good Evening, Harish 👋</h6>
+      <p>You have 4 pending tasks and 8 completed tasks today.</p>
+    </div>
+    <div class="topbar_icons">
+      <button id="search">🔍</button>
+      <button id="theme-button">☀️</button>
+      <button id="theme-button">🌙</button>
+    </div>
+  </div>
+
+  <!-- BOX 3–6: STAT CARDS -->
+  <div class="box3">
+    <div class="icon"><i class="ri-todo-line"></i></div>
+    <div class="inner-text">
+      <p>Total Tasks</p><h1>12</h1><p>All Time Tasks</p>
+    </div>
+  </div>
+  <div class="box4">
+    <div class="icon"><i class="ri-time-line"></i></div>
+    <div class="inner-text">
+      <p>Pending</p><h1>4</h1><p>Tasks to do</p>
+    </div>
+  </div>
+  <div class="box5">
+    <div class="icon"><i class="ri-checkbox-circle-line"></i></div>
+    <div class="inner-text">
+      <p>Completed</p><h1>8</h1><p>Tasks Done</p>
+    </div>
+  </div>
+  <div class="box6">
+    <div class="icon"><i class="ri-calendar-todo-line"></i></div>
+    <div class="inner-text">
+      <p>Today</p><h1>6</h1><p>Tasks For Today</p>
+    </div>
+  </div>
+
+  <!-- BOX 7: TASK LIST -->
+  <div class="box7">
+    <div class="main-container">
+
+      <div class="task-control">
+        <input class="task-input" type="text" placeholder="What needs to be done?">
+        <select class="select-drop">
+          <option>Select Category</option>
+          <option>Work</option>
+          <option>Personal</option>
+          <option>Shopping</option>
+          <option>Urgent</option>
+        </select>
+        <select class="select-drop">
+          <option>Select Prioirty</option>
+          <option>High</option>
+          <option>Medium</option>
+          <option>Low</option>
+        </select>
+        <button class="add-btn">+ Add Task</button>
+      </div>
+
+      <div class="task-category">
+        <div class="sub-category">
+          <button class="active-filter">All</button>
+          <button>Work</button>
+          <button>Personal</button>
+          <button>Shopping</button>
+          <button>Urgent</button>
+        </div>
+        <div class="sub-search">
+          <input type="text" placeholder="🔍   Search tasks...">
+        </div>
+      </div>
+
+      <!-- Tasks rendered by JS -->
+      <div class="task-list"></div>
+
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN: progress + priority + upcoming -->
+  <div class="right-col">
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+  </div>
+
+   </main>
+    <script src="script.js"></script>
+</body>
+</html>
